@@ -1,0 +1,89 @@
+/* Pengaturan Font Global */
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+}
+
+/* Kustomisasi Range Slider (Biru Langit) */
+input[type="range"].sky-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #E0F2FE;
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Thumb Slider untuk Chrome, Safari, Edge */
+input[type="range"].sky-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #0EA5E9;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 2px 6px rgba(14, 165, 233, 0.45);
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].sky-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: #0284C7;
+}
+
+/* Thumb Slider untuk Firefox */
+input[type="range"].sky-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #0EA5E9;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 2px 6px rgba(14, 165, 233, 0.45);
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+/* Menghilangkan panah spinner pada input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Animasi halus untuk Progress Bar */
+.progress-fill {
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efek Hover pada Kartu Target */
+.goal-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.12), 0 8px 10px -6px rgba(14, 165, 233, 0.08);
+}
+
+/* Animasi muncul modal */
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-modal {
+    animation: modalPop 0.2s ease-out forwards;
+}
